@@ -1,9 +1,28 @@
 package com.kodilla.sudoku.structure;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SudokuRow {
 
-    private ArrayList<SudokuElement> elements ;
+    private final List<SudokuElement> elements = new ArrayList<>();
 
+
+    public SudokuRow() {
+        for (int i = 0; i < SudokuBoard.SIZE; i++) {
+            elements.add(new SudokuElement());
+        }
+    }
+
+
+    public SudokuRow(int[] board) {
+        for (int i = 0; i < SudokuBoard.SIZE; i++) {
+            elements.add(new SudokuElement(board[i]));
+        }
+    }
+
+
+    public SudokuElement getElement(int col) {
+        return elements.get(col);
+    }
 }

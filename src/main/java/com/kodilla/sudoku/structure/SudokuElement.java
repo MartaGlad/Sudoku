@@ -1,14 +1,35 @@
 package com.kodilla.sudoku.structure;
 
-import java.util.ArrayList;
-
 public class SudokuElement {
 
     private int value;
-
-    private ArrayList<Integer> possibleValues = new ArrayList<>();
-
-    public static int EMPTY = -1;
+    public static final int EMPTY = -1;
 
 
+    public SudokuElement() {
+        this.value = EMPTY;
+    }
+
+
+    public SudokuElement(int value) {
+        if (value == 0) {
+            this.value = EMPTY;
+        } else
+            this.value = value;
+    }
+
+
+    public boolean isEmpty() {
+        return value == EMPTY;
+    }
+
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+
+    public int getValue() {
+        return value;
+    }
 }
