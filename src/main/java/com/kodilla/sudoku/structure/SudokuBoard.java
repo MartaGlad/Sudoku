@@ -18,30 +18,15 @@ public class SudokuBoard {
     }
 
 
-    public SudokuBoard(int[][] board) {
-        for (int i = 0; i < SIZE; i++) {
-            rows.add(new SudokuRow(board[i]));
-        }
-    }
-
-
     public SudokuElement getElement(int row, int col) {
+
         return rows.get(row).getElement(col);
     }
 
 
     public void setElement(int row, int col, int value) {
+
         rows.get(row).getElement(col).setValue(value);
-    }
-
-
-    public boolean isSolved() {
-        for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) {
-                if (getElement(i, j).isEmpty()) return false;
-            }
-        }
-        return true;
     }
 
 

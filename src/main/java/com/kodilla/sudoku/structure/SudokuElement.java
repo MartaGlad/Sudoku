@@ -11,14 +11,6 @@ public class SudokuElement {
     }
 
 
-    public SudokuElement(int value) {
-        if (value == 0) {
-            this.value = EMPTY;
-        } else
-            this.value = value;
-    }
-
-
     public boolean isEmpty() {
         return value == EMPTY;
     }

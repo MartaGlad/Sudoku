@@ -15,13 +15,6 @@ public class SudokuRow {
     }
 
 
-    public SudokuRow(int[] board) {
-        for (int i = 0; i < SudokuBoard.SIZE; i++) {
-            elements.add(new SudokuElement(board[i]));
-        }
-    }
-
-
     public SudokuElement getElement(int col) {
         return elements.get(col);
     }
